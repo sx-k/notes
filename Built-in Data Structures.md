@@ -15,7 +15,7 @@ list.remove(list.size()-1); // [2, 7, 5]
 System.out.println(list.get(2)); // 5
 ```
 ## [Stacks](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
-**Last In, First Out</br>
+**Last In, First Out (LIFO)</br>
   A stack is a Last In First Out (LIFO) data structure that supports three operations:
 push, which adds an element to the top of the stack, pop, which removes an element from
 the top of the stack, and peek, which retrieves the element at the top without removing it,
@@ -31,3 +31,18 @@ System.out.println(s.peek()); // 1
 s.pop(); // []
 System.out.println(s.size()); // 0
 ```
+## [Queues](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
+**First In, First Out (FILO)</br>
+A queue is a First In First Out (FIFO) data structure that supports three operations of
+add, insertion at the back of the queue, poll, deletion from the front of the queue, and peek,
+which retrieves the element at the front without removing it, all in O(1) time. Java doesn’t
+actually have a Queue class; it’s only an interface. The most commonly used implementation
+is the LinkedList, declared as follows: ```Queue q = new LinkedList();```.**
+```java
+Queue<Integer> q = new LinkedList<Integer>();
+q.add(1); // [1]
+q.add(3); // [3, 1]
+q.poll(); // [3]
+q.add(4); // [4, 3]
+System.out.println(q.size()); // 2
+System.out.println(q.peek()); // 3```

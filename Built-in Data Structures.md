@@ -63,3 +63,23 @@ deque.addFirst(4); // [3, 1, 2, 4]
 deque.removeLast(); // [3, 1, 2]
 deque.removeFirst(); // [1, 2]
 ```
+## [Priority Queues](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)
+**A priority queue supports the following operations: insertion of elements, deletion of
+the element considered highest priority, and retrieval of the highest priority element, all in
+O(log n) time according to the number of elements in the priority queue. Priority is based on
+a comparator function, but** ***by default the lowest element is at the front of the priority queue***.
+**The priority queue is one of the most important data structures in competitive programming,
+so make sure you understand how and when to use it. By default, the Priority Queue puts
+the lowest element at the front of the queue.**
+```java
+PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+pq.add(4); // [4]
+pq.add(2); // [4, 2]
+pq.add(1); // [4, 2, 1]
+pq.add(3); // [4, 3, 2, 1]
+System.out.println(pq.peek()); // 1
+pq.poll(); // [4, 3, 2]
+pq.poll(); // [4, 3]
+pq.add(5); // [5, 4, 3]
+```
+

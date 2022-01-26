@@ -14,7 +14,7 @@ list.add(8); // [2, 7, 5, 8]
 list.remove(list.size()-1); // [2, 7, 5]
 // here, we remove the element from the end of the list; this is O(1).
 System.out.println(list.get(2)); // 5
-```
+```java
 ## Stacks
 //https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html</br>
 **Last In, First Out</br>

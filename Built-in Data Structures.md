@@ -18,10 +18,10 @@ System.out.println(list.get(2)); // 5
 ## Stacks
 //https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html</br>
 **Last In, First Out</br>
-**A stack is a Last In First Out (LIFO) data structure that supports three operations:
-**push, which adds an element to the top of the stack, pop, which removes an element from
-**the top of the stack, and peek, which retrieves the element at the top without removing it,
-**all in O(1) time. Think of it like a real-world stack of papers.*/
+A stack is a Last In First Out (LIFO) data structure that supports three operations:
+push, which adds an element to the top of the stack, pop, which removes an element from
+the top of the stack, and peek, which retrieves the element at the top without removing it,
+all in O(1) time. Think of it like a real-world stack of papers.**
 ```java
 import java.util.Stack;
 Stack<Integer> s = new Stack<Integer>();

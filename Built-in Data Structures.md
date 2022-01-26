@@ -14,7 +14,7 @@ list.add(8); // [2, 7, 5, 8]
 list.remove(list.size()-1); // [2, 7, 5]
 // here, we remove the element from the end of the list; this is O(1).
 System.out.println(list.get(2)); // 5
-```java
+```
 ## Stacks
 //https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html</br>
 **Last In, First Out</br>
@@ -22,7 +22,7 @@ System.out.println(list.get(2)); // 5
 **push, which adds an element to the top of the stack, pop, which removes an element from
 **the top of the stack, and peek, which retrieves the element at the top without removing it,
 **all in O(1) time. Think of it like a real-world stack of papers.*/
-```
+```java
 import java.util.Stack;
 Stack<Integer> s = new Stack<Integer>();
 s.push(1); // [1]

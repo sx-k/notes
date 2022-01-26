@@ -32,7 +32,7 @@ s.pop(); // []
 System.out.println(s.size()); // 0
 ```
 ## [Queues](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
-**First In, First Out (FILO)</br>
+**First In, First Out (FIFO)</br>
 A queue is a First In First Out (FIFO) data structure that supports three operations of
 add, insertion at the back of the queue, poll, deletion from the front of the queue, and peek,
 which retrieves the element at the front without removing it, all in O(1) time. Java doesn’t

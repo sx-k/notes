@@ -1,5 +1,6 @@
-##ArrayLists
+## ArrayLists
 //https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+```java
 import java.util.ArrayList;
 ArrayList<Integer> list = new ArrayList<Integer>(); // declare the dynamic array
 list.add(2); // [2]
@@ -13,14 +14,15 @@ list.add(8); // [2, 7, 5, 8]
 list.remove(list.size()-1); // [2, 7, 5]
 // here, we remove the element from the end of the list; this is O(1).
 System.out.println(list.get(2)); // 5
-
-##Stacks
+```
+## Stacks
 //https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
 **Last In, First Out
 **A stack is a Last In First Out (LIFO) data structure that supports three operations:
 **push, which adds an element to the top of the stack, pop, which removes an element from
 **the top of the stack, and peek, which retrieves the element at the top without removing it,
 **all in O(1) time. Think of it like a real-world stack of papers.*/
+```
 import java.util.Stack;
 Stack<Integer> s = new Stack<Integer>();
 s.push(1); // [1]
@@ -30,3 +32,4 @@ s.pop(); // [1]
 System.out.println(s.peek()); // 1
 s.pop(); // []
 System.out.println(s.size()); // 0
+```

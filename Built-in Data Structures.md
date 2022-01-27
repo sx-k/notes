@@ -1,3 +1,4 @@
+### DYNAMIC ARRAYS
 ## [ArrayLists](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
 ```java
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ list.remove(list.size()-1); // [2, 7, 5]
 // here, we remove the element from the end of the list; this is O(1).
 System.out.println(list.get(2)); // 5
 ```
+### STACKS AND QUEUES
 ## [Stacks](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
 **Last In, First Out (LIFO)</br>
   A stack is a Last In First Out (LIFO) data structure that supports three operations:
@@ -81,5 +83,32 @@ System.out.println(pq.peek()); // 1
 pq.poll(); // [4, 3, 2]
 pq.poll(); // [4, 3]
 pq.add(5); // [5, 4, 3]
+```
+### SETS AND MAPS
+## [HashSets (Unordered Sets)] (https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+**The unordered set works by hashing, which is assigning a usually-unique code to every
+variable/object which allows insertions, deletions, and searches in O(1) time, albeit with a
+high constant factor, as hashing requires a large constant number of operations. However,
+as the name implies, elements are not ordered in any meaningful way, so traversals of an
+unordered set will return elements in some arbitrary order. The operations on an unordered
+set are ```add```, which adds an element to the set if not already present, ```remove```, which deletes
+an element if it exists, and ```contains```, which checks whether the set contains that element.**
+```java
+HashSet<Integer> set = new HashSet<Integer>();
+set.add(1); // [1]
+set.add(4); // [1, 4] in arbitrary order
+set.add(2); // [1, 4, 2] in arbitrary order
+set.add(1); // [1, 4, 2] in arbitrary order
+// the add method did nothing because 1 was already in the set
+System.out.println(set.contains(1)); // true
+set.remove(1); // [2, 4] in arbitrary order
+System.out.println(set.contains(5)); // false
+set.remove(0); // [2, 4] in arbitrary order
+// if the element to be removed does not exist, nothing happens
+for(int element : set){
+System.out.println(element);
+}
+// You can iterate through an unordered set, but it will do so in arbitrary
+,→ order
 ```
 

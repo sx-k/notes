@@ -87,8 +87,10 @@ pq.poll(); // [4, 3, 2]
 pq.poll(); // [4, 3]
 pq.add(5); // [5, 4, 3]
 ```
-# SETS AND MAPS
-## [HashSets (Unordered Sets)](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+# SETS
+**A set is a collection of objects that contains no duplicates. There are two types of sets:
+unordered sets (```HashSet``` in Java), and ordered set (```TreeSet``` in Java).**
+## [HashSets (UnOrdered Sets)](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
 **The unordered set works by hashing, which is assigning a usually-unique code to every
 variable/object which allows insertions, deletions, and searches in O(1) time, albeit with a
 high constant factor, as hashing requires a large constant number of operations. However,
@@ -119,6 +121,8 @@ System.out.println(element);
 and searches on the ordered set require O(log n) time, based on the number of elementsin the set. As well as those supported by the unordered set, the ordered set also allows four additional operations: ```first```, which returns the lowest element in the set, ```last```, which
 returns the highest element in the set, ```lower```, which returns the greatest element strictly less
 than some element, and ```higher```, which returns the least element strictly greater than it.**
+**The primary limitation of the ordered set is that we can’t efficiently access the kth largest
+element in the set, or find the number of elements in the set greater than some arbitrary x.**
 ```java
 import java.util.TreeSet;
 TreeSet<Integer> set = new TreeSet<Integer>();
@@ -132,4 +136,54 @@ System.out.println(set.lower(5)); // 2
 System.out.println(set.first()); // 1
 System.out.println(set.last()); // 14
 set.remove(set.higher(6)); // [1, 2, 14]
-System.out.println(set.higher(23); // ERROR, no such element exists```
+System.out.println(set.higher(23); // ERROR, no such element exists
+```
+# MAPS
+**A map is a set of ordered pairs, each containing a key and a value. In a map, all keys
+are required to be unique, but values can be repeated. Maps have three primary methods:
+one to add a specified key-value pairing, one to retrieve the value for a given key, and one
+to remove a key-value pairing from the map. Like sets, maps can be unordered (```HashSet```
+in Java) or ordered (```TreeSet``` in Java). In an unordered map, hashing is used to support
+O(1) operations. In an ordered map, the entries are sorted in order of key. Operations are
+O(log n), but accessing or removing the next key higher or lower than some input k is also
+supported**
+## [HashMaps (UnOrdered Maps)] (https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
+**In the unordered map, the ```put(key, value)``` method assigns a value to a key and places
+the key and value pair into the map. The ```get(key)``` method returns the value associated with
+the key. The ```containsKey(key)``` method checks whether a key exists in the map. Lastly,
+```remove(key)``` removes the map entry associated with the specified key. All of these operations
+are O(1), but again, due to the hashing, this has a high constant factor.**
+```java
+import java.util.HashMap;
+HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+map.put(1, 5); // [(1, 5)]
+map.put(3, 14); // [(1, 5); (3, 14)]
+map.put(2, 7); // [(1, 5); (3, 14); (2, 7)]
+map.remove(2); // [(1, 5); (3, 14)]
+System.out.println(map.get(1)); // 5
+System.out.println(map.containsKey(7)); // false
+System.out.println(map.containsKey(1)); // true
+```
+## [TreeMaps (Ordered Maps)] (https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)
+**The ordered map supports all of the operations that an unordered map supports, and
+additionally supports firstKey/firstEntry and lastKey/lastEntry, returning the lowest
+key/entry and the highest key/entry, as well as higherKey/higherEntry and lowerKey/
+lowerEntry, returning the lowest key/entry strictly higher than the specified key, or the
+highest key/entry strictly lower than the specified key.**
+A note on unordered sets and maps: In USACO contests, they’re generally fine, but in
+CodeForces contests, you should always use sorted sets and maps. This is because the built-in
+hashing algorithm is vulnerable to pathological data sets causing abnormally slow runtimes,
+in turn causing failures on some test cases.
+```java
+TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+map.put(3, 5); // [(3, 5)]
+map.put(11, 4); // [(3, 5); (11, 4)]
+map.put(10, 491); // [(3, 5); (10, 491); (11, 4)]
+System.out.println(map.firstKey()); // 3
+System.out.println(map.firstEntry()); // (3, 5)
+System.out.println(map.lastEntry()); // (11, 4)
+System.out.println(map.higherEntry(4)); // (10, 491)
+map.remove(11); // [(3, 5); (10, 491)]
+System.out.println(map.lowerKey(4)); // 3
+System.out.println(map.lowerKey(3)); // ERROR
+```

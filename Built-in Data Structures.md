@@ -41,6 +41,7 @@ which retrieves the element at the front without removing it, all in O(1) time. 
 actually have a Queue class; it’s only an interface. The most commonly used implementation
 is the LinkedList, declared as follows: ```Queue q = new LinkedList();```.**
 ```java
+import java.util.Queue;
 Queue<Integer> q = new LinkedList<Integer>();
 q.add(1); // [1]
 q.add(3); // [3, 1]
@@ -57,6 +58,7 @@ methods for adding and removing are ```addFirst```, ```removeFirst```, ```addLas
 The methods for retrieving the first and last elements without removing are ```peekFirst``` and
 ```peekLast```.**
 ```java
+import java.util.Deque;
 ArrayDeque<Integer> deque = new ArrayDeque<Integer>();
 deque.addFirst(1); // [1]
 deque.addLast(2); // [1, 2]
@@ -74,6 +76,7 @@ a comparator function, but** ***by default the lowest element is at the front of
 so make sure you understand how and when to use it. By default, the Priority Queue puts
 the lowest element at the front of the queue.**
 ```java
+import java.util.PriorityQueue;
 PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
 pq.add(4); // [4]
 pq.add(2); // [4, 2]
@@ -94,6 +97,7 @@ unordered set will return elements in some arbitrary order. The operations on an
 set are ```add```, which adds an element to the set if not already present, ```remove```, which deletes
 an element if it exists, and ```contains```, which checks whether the set contains that element.**
 ```java
+import java.util.HashSet;
 HashSet<Integer> set = new HashSet<Integer>();
 set.add(1); // [1]
 set.add(4); // [1, 4] in arbitrary order
@@ -110,4 +114,22 @@ System.out.println(element);
 }
 // You can iterate through an unordered set, but it will do so in arbitrary order
 ```
-
+## [TreeSets (Ordered Sets)](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)
+**The second type of set data structure is the ordered or sorted set. Insertions, deletions,
+and searches on the ordered set require O(log n) time, based on the number of elementsin the set. As well as those supported by the unordered set, the ordered set also allows four additional operations: ```first```, which returns the lowest element in the set, ```last```, which
+returns the highest element in the set, ```lower```, which returns the greatest element strictly less
+than some element, and ```higher```, which returns the least element strictly greater than it.**
+```java
+import java.util.TreeSet;
+TreeSet<Integer> set = new TreeSet<Integer>();
+set.add(1); // [1]
+set.add(14); // [1, 14]
+set.add(9); // [1, 9, 14]
+set.add(2); // [1, 2, 9, 14]
+System.out.println(set.higher(7)); // 9
+System.out.println(set.higher(9)); // 14
+System.out.println(set.lower(5)); // 2
+System.out.println(set.first()); // 1
+System.out.println(set.last()); // 14
+set.remove(set.higher(6)); // [1, 2, 14]
+System.out.println(set.higher(23); // ERROR, no such element exists```

@@ -120,7 +120,7 @@ System.out.println(element);
 **The second type of set data structure is the ordered or sorted set. Insertions, deletions,
 and searches on the ordered set require O(log n) time, based on the number of elementsin the set. As well as those supported by the unordered set, the ordered set also allows four additional operations: ```first```, which returns the lowest element in the set, ```last```, which
 returns the highest element in the set, ```lower```, which returns the greatest element strictly less
-than some element, and ```higher```, which returns the least element strictly greater than it.**
+than some element, and ```higher```, which returns the least element strictly greater than it.**</br>
 **The primary limitation of the ordered set is that we can’t efficiently access the kth largest
 element in the set, or find the number of elements in the set greater than some arbitrary x.**
 ```java
@@ -147,7 +147,7 @@ in Java) or ordered (```TreeSet``` in Java). In an unordered map, hashing is use
 O(1) operations. In an ordered map, the entries are sorted in order of key. Operations are
 O(log n), but accessing or removing the next key higher or lower than some input k is also
 supported**
-## [HashMaps (UnOrdered Maps)] (https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
+## [HashMaps (UnOrdered Maps)](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
 **In the unordered map, the ```put(key, value)``` method assigns a value to a key and places
 the key and value pair into the map. The ```get(key)``` method returns the value associated with
 the key. The ```containsKey(key)``` method checks whether a key exists in the map. Lastly,
@@ -164,12 +164,12 @@ System.out.println(map.get(1)); // 5
 System.out.println(map.containsKey(7)); // false
 System.out.println(map.containsKey(1)); // true
 ```
-## [TreeMaps (Ordered Maps)] (https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)
+## [TreeMaps (Ordered Maps)](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)
 **The ordered map supports all of the operations that an unordered map supports, and
 additionally supports firstKey/firstEntry and lastKey/lastEntry, returning the lowest
 key/entry and the highest key/entry, as well as higherKey/higherEntry and lowerKey/
 lowerEntry, returning the lowest key/entry strictly higher than the specified key, or the
-highest key/entry strictly lower than the specified key.**
+highest key/entry strictly lower than the specified key.**</br>
 A note on unordered sets and maps: In USACO contests, they’re generally fine, but in
 CodeForces contests, you should always use sorted sets and maps. This is because the built-in
 hashing algorithm is vulnerable to pathological data sets causing abnormally slow runtimes,

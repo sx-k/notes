@@ -1,4 +1,4 @@
-### DYNAMIC ARRAYS
+# DYNAMIC ARRAYS
 ## [ArrayLists](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
 ```java
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ list.remove(list.size()-1); // [2, 7, 5]
 // here, we remove the element from the end of the list; this is O(1).
 System.out.println(list.get(2)); // 5
 ```
-### STACKS AND QUEUES
+# STACKS AND QUEUES
 ## [Stacks](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
 **Last In, First Out (LIFO)</br>
   A stack is a Last In First Out (LIFO) data structure that supports three operations:
@@ -84,8 +84,8 @@ pq.poll(); // [4, 3, 2]
 pq.poll(); // [4, 3]
 pq.add(5); // [5, 4, 3]
 ```
-### SETS AND MAPS
-## [HashSets (Unordered Sets)] (https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+# SETS AND MAPS
+## [HashSets (Unordered Sets)](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
 **The unordered set works by hashing, which is assigning a usually-unique code to every
 variable/object which allows insertions, deletions, and searches in O(1) time, albeit with a
 high constant factor, as hashing requires a large constant number of operations. However,
@@ -108,7 +108,6 @@ set.remove(0); // [2, 4] in arbitrary order
 for(int element : set){
 System.out.println(element);
 }
-// You can iterate through an unordered set, but it will do so in arbitrary
-,→ order
+// You can iterate through an unordered set, but it will do so in arbitrary order
 ```
 

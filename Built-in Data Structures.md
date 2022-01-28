@@ -187,3 +187,28 @@ map.remove(11); // [(3, 5); (10, 491)]
 System.out.println(map.lowerKey(4)); // 3
 System.out.println(map.lowerKey(3)); // ERROR
 ```
+## MultiSets
+**Lastly, there is the multiset, which is essentially a sorted set that allows multiple copies
+of the same element. While there is no ```Multiset``` in Java, we can implement one using the
+```TreeMap``` from values to their respective frequencies. We declare the ```TreeMap``` implementation
+globally so that we can write functions for adding and removing elements from it.**</br>
+**The first, last, higher, and lower operations still function as intended; just use firstKey,
+lastKey, higherKey, and lowerKey respectively**
+```java
+static TreeMap<Integer, Integer> multiset = new TreeMap<Integer, Integer>();
+public static void main(String[] args){
+...
+}
+static void add(int x){
+  if(multiset.containsKey(x)){
+  multiset.put(x, multiset.get(x) + 1);
+  } else {
+    multiset.put(x, 1);
+  }
+}
+static void remove(int x){
+  multiset.put(x, multiset.get(x) - 1);
+  if(multiset.get(x) == 0){
+    multiset.remove(x);
+  }
+}```

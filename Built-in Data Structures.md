@@ -192,8 +192,8 @@ System.out.println(map.lowerKey(3)); // ERROR
 of the same element. While there is no ```Multiset``` in Java, we can implement one using the
 ```TreeMap``` from values to their respective frequencies. We declare the ```TreeMap``` implementation
 globally so that we can write functions for adding and removing elements from it.**</br>
-**The first, last, higher, and lower operations still function as intended; just use firstKey,
-lastKey, higherKey, and lowerKey respectively**
+**The first, last, higher, and lower operations still function as intended; just use ```firstKey```,
+```lastKey```, ```higherKey```, and ```lowerKey``` respectively**
 ```java
 static TreeMap<Integer, Integer> multiset = new TreeMap<Integer, Integer>();
 public static void main(String[] args){

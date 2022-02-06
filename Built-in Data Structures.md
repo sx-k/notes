@@ -197,7 +197,7 @@ globally so that we can write functions for adding and removing elements from it
 ```java
 static TreeMap<Integer, Integer> multiset = new TreeMap<Integer, Integer>();
 public static void main(String[] args){
-
+...
 }
 static void add(int x){
   if(multiset.containsKey(x)){
@@ -211,5 +211,6 @@ static void remove(int x){
   if(multiset.get(x) == 0){
     multiset.remove(x);
   }
-}```
+}
+```
 ![Time Complexity of these Data Structures](images/BigO cheatsheet.jpg) 

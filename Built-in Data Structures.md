@@ -213,4 +213,4 @@ static void remove(int x){
   }
 }
 ```
-![Time-Complexity-of-these-Data-Structures](https://github.com/welterskelter/notes/blob/images/BigO%cheatsheet.jpg?raw=true)
+![Time-Complexity-of-these-Data-Structures](https://github.com/welterskelter/notes/blob/images/BigO-cheatsheet.jpg?raw=true)

@@ -213,4 +213,4 @@ static void remove(int x){
   }
 }
 ```
-![Time Complexity of these Data Structures](./images/BigO cheatsheet.jpg) 
+![Time Complexity of these Data Structures](/images/BigO cheatsheet.jpg) 

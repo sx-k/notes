@@ -1,8 +1,8 @@
 # notes
 my notes on anything related to comp sci</br>
 why are they in github?: because markdown is surprisingly fun to use :)</br>
-if you want to add anything or have nay ideas, feel free to send an email or make a pull/push request
-
+if you want to add anything or have nay ideas, feel free to send an email or make a pull/push request</br>
+p.s. you can go to the different markdown(md) files in this repository to see my notes, this entire thing is a work in progress so be patient
 ## Some websites/books/videos I have found along the way:
 ### JAVA:
 - [AN INTRODUCTION TO THE USA COMPUTING OLYMPIAD by Darren Yao](https://darrenyao.com/usacobook/java.pdf)

@@ -1,13 +1,13 @@
 # Time Complexity vs Space Complexity
 The main difference is that **Time Complexity** *measures the amount of computer time that it takes to run a program* while **Space Complexity** *measures the amount of memory space needed by the program*. [link](https://courses.cs.northwestern.edu/311/html/space-complexity.html) or [two](https://www.studytonight.com/data-structures/space-complexity-of-algorithms)
-## [Time Complexity](https://en.wikipedia.org/wiki/Time_complexity)
+# [Time Complexity](https://en.wikipedia.org/wiki/Time_complexity)
 - measures the amount of computer time that it takes to run a program, or in other words, the amount of operations that will be done by the computer
-### Big O Notation
+## Big O Notation
 - how **Time Complexity** is measured
 - is used to classify algorithms according to how their run time or space requirements grow as the input size grows
 - characterizes functions according to their growth rates: different functions with the same growth rate may be represented using the same O notation (like how <img src="https://render.githubusercontent.com/render/math?math=x^2"> and <img src="https://render.githubusercontent.com/render/math?math=\sqrt{x^4-1}"> have the same growth rate">
 - since it is asymptomatic, or refers to a very large x, it is basically an End Behavior Model(EBM) where we don't care about the smaller terms (i.e if we have O(<img src="https://render.githubusercontent.com/render/math?math=n^2 %2B n">) we would just use O(<img src="https://render.githubusercontent.com/render/math?math=n^2">)
-### Constant Complexity
+## Constant Complexity
 - the best of the best
 - operation always completes in the same amount of CPU time regardless of the input size
 - ex. 
@@ -19,7 +19,7 @@ The main difference is that **Time Complexity** *measures the amount of computer
    }
   ```
 - this is O(1), even though it takes 2 operations to complete (```arr[0]=2;``` and ```return arr[0]```) as it only does a fixed number of operations no matter the input size so it is O(1)
-### Logarithmic Complexity
+## Logarithmic Complexity
 - still very very good
 - operation grows logarithmically in relation to the input
 - is really <img src="https://render.githubusercontent.com/render/math?math=\log_{a}n"> where *a* is a constant but we just get rid of the *a* and use <img src="https://render.githubusercontent.com/render/math?math=\log{n}">
@@ -49,7 +49,7 @@ The main difference is that **Time Complexity** *measures the amount of computer
     ```
 - the binary search is the perfect example because it is technically O( <img src="https://render.githubusercontent.com/render/math?math=\log_{2}n">) which is O(<img src="https://render.githubusercontent.com/render/math?math=\log{n}">)
   - this essentially means that if you double the size of the array, there would only be one more computation needed
-### Linear Complexity
+## Linear Complexity
 - its okay (O(k) hah), could be worse
 - the number of computations increases linearly with the number of elements
 - ex.

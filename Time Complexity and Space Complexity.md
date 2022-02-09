@@ -4,5 +4,5 @@ The main difference is that **Time Complexity** *measures the amount of computer
 - measures the amount of computer time that it takes to run a program, or in other words, the amount of operations that will be done by the computer
 - this is measured by using "Big O notation"
 - usually measured by looking at the worst case scenario (or sometimes the average scenario)</br>
-![Know thy Complexities](https://github.com/Snipexkillo/notes/blob/fbb9498c1ab5367331fb6c1868e70927b326e408/images/Know%20Thy%20Complexities.jpeg?raw=true)
 
+[<img src="Know thy complexities" width="250"/>](https://github.com/Snipexkillo/notes/blob/fbb9498c1ab5367331fb6c1868e70927b326e408/images/Know%20Thy%20Complexities.jpeg?raw=true)

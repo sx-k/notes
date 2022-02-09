@@ -9,6 +9,7 @@ p.s. you can go to the different markdown(md) files in this repository to see my
 - [Java Structures: Data Structures for the Principled Programmer by Duane A. Bailey](http://www.cs.williams.edu/~bailey/JavaStructures/Book_files/JavaStructures.pdf)
 ### PYTHON
 - [Python Structers: Structured Python for the Principled Programmer by Duane A. Bailey](https://www.cs.williams.edu/~morgan/cs136-f15/bailey-python-book.pdf)
+- [Automate the Boring Stuff by Al Sweigart](https://automatetheboringstuff.com)
 ### Other Cool Stuff
 - [The Fundamentals of the Big-O Notation](https://towardsdatascience.com/the-fundamentals-of-the-big-o-notation-7fe14210b675)
 - [What Is Big O Notation?](https://www.youtube.com/watch?v=Q_1M2JaijjQ)

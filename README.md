@@ -7,6 +7,7 @@ p.s. you can go to the different markdown(md) files in this repository to see my
 ### JAVA:
 - [AN INTRODUCTION TO THE USA COMPUTING OLYMPIAD by Darren Yao](https://darrenyao.com/usacobook/java.pdf)
 - [Java Structures: Data Structures for the Principled Programmer by Duane A. Bailey](http://www.cs.williams.edu/~bailey/JavaStructures/Book_files/JavaStructures.pdf)
+- [Time Complexity of Java Collections](https://www.baeldung.com/java-collections-complexity)
 ### PYTHON
 - [Python Structers: Structured Python for the Principled Programmer by Duane A. Bailey](https://www.cs.williams.edu/~morgan/cs136-f15/bailey-python-book.pdf)
 - [Automate the Boring Stuff by Al Sweigart](https://automatetheboringstuff.com)
